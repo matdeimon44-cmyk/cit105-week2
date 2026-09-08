@@ -35,3 +35,24 @@ def is_valid_str(text):
         raise TypeError("Input must be text.")
 
     return text.strip() != ""
+def truncate(text, limit=20):
+    """Shorten text to a limit and add an ellipsis if shortened."""
+    if not isinstance(text, str):
+        raise TypeError("Text must be a string.")
+    if not isinstance(limit, int):
+        raise TypeError("Limit must be an integer.")
+    if limit < 0:
+        raise ValueError("Limit cannot be negative.")
+
+    if len(text) > limit:
+        return text[:limit] + "..."
+
+    return text
+
+
+def safe_filename(text):
+    """Turn text into a safe filename."""
+    if not isinstance(text, str):
+        raise TypeError("Text must be a string.")
+
+    return text.replace(" ", "_").replace("/", "_").replace('"', "").replace("'", "")

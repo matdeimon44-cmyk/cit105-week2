@@ -29,7 +29,7 @@ def initials(full_name):
     return "".join(word[0].upper() for word in words)
 
 
-def is_valid_str(text):
+def is_valid_url(text):
     """Return True if the text contains non-space characters."""
     if not isinstance(text, str):
         raise TypeError("Input must be text.")

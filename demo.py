@@ -2,7 +2,7 @@ from functions import (
     celsius_to_fahrenheit,
     line_total,
     initials,
-    is_valid_str,
+    is_valid_url,
     truncate,
     safe_filename,
 )
@@ -11,7 +11,7 @@ from functions import (
 print(celsius_to_fahrenheit(25))
 print(line_total(10, 3))
 print(initials("Luis De Leon"))
-print(is_valid_str("Hello"))
+print(is_valid_url("Hello"))
 print(truncate("Hello World", 5))
 print(safe_filename('My File/Test "One"'))
 
@@ -20,7 +20,7 @@ tests = [
     lambda: celsius_to_fahrenheit("hot"),
     lambda: line_total(10, -2),
     lambda: initials(123),
-    lambda: is_valid_str(123),
+    lambda: is_valid_url(123),
     lambda: truncate("Hello", -1),
     lambda: safe_filename(123),
 ]

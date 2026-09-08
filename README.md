@@ -26,7 +26,7 @@ Creates uppercase initials from a full name.
 - Rejects: non-string input
 - Handles extra spaces and empty strings
 
-### is_valid_str(text)
+### is_valid_url(text)
 Checks whether a string contains non-space characters.
 
 - Input: a string

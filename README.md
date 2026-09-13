@@ -138,3 +138,9 @@ Open the local URL displayed by Streamlit in your web browser.
 ## Testing
 
 The application was tested by generating a QR code containing a URL and scanning it with a phone camera. The generated QR code successfully opened the expected URL.
+
+## Live Application
+
+The QR Code Generator is deployed on Streamlit Community Cloud.
+
+https://cit105-week2-9umhbtrc78phztywwnzany.streamlit.app/

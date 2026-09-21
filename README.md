@@ -144,3 +144,54 @@ The application was tested by generating a QR code containing a URL and scanning
 The QR Code Generator is deployed on Streamlit Community Cloud.
 
 https://cit105-week2-9umhbtrc78phztywwnzany.streamlit.app/
+
+## Batch Mode
+
+The QR Code Generator now supports batch generation from a CSV file.
+
+### CSV Format
+
+The CSV file must contain these two columns:
+
+- name - the name used to create the QR code filename.
+- url - the URL encoded in the QR code.
+
+Example:
+
+```csv
+name,url
+Atlantis University,https://www.atlantisuniversity.edu
+Google,https://www.google.com
+
+How to Use Batch Mode
+
+1. Open the QR Code Generator.
+2. Select Batch from CSV.
+3. Upload a CSV file containing the name and url columns.
+4. Review the batch preview.
+5. Check the number of valid and rejected rows.
+6. Review the reason shown for rejected rows.
+7. Download all valid QR codes in one ZIP file.
+
+Validation
+
+Batch mode skips invalid rows instead of stopping the application.
+
+Rows are rejected when:
+
+* The name is blank.
+* The URL is blank.
+* The row contains only whitespace.
+* The URL appears malformed.
+* The required name or url column is missing.
+
+Duplicate names are handled automatically by adding a counter to the filename so that an earlier QR code is not overwritten.
+
+Sample CSV
+
+A sample file named sample_batch.csv is included in this repository for testing batch mode.
+
+Single Code Mode
+
+The original single-code QR generator is still available and works independently from batch mode.
+
